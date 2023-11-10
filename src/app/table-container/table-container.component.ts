@@ -75,11 +75,9 @@ export class TableContainerComponent {
   }
   editUser(userName: string) {
     this.dialog.open(DialogConfirm, {
-      width: '230px',
       data: {
         name: userName,
-      },
-      backdropClass: 'backdropBackground'
+      }
     });
   }
   previousPage() {

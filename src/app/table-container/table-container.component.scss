@@ -43,8 +43,8 @@
 
             thead {
                 tr {
-                    border-top: 1px solid #ccc;
-                    background-color: #e6e6e6;
+                    border-top: 1px solid var(--border);
+                    background-color: var(--inActiveBg);
                 }
 
                 th {
@@ -61,7 +61,7 @@
 
 
                     &:hover {
-                        background-color: #edebf2;
+                        background-color: var(--btnBorder);
                     }
                 }
 
