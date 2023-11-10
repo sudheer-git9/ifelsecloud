@@ -1,0 +1,114 @@
+<section class="main-section">
+    <aside class="side-container">
+        <app-side-bar></app-side-bar>
+    </aside>
+    <main class="main-container">
+        <div class="header">
+            <div class="title">
+                <span>Welcome back, Olivia</span>
+            </div>
+            <div class="header-actions">
+                <button class="icon">
+                    <mat-icon>search</mat-icon>
+                </button>
+                <button class="icon-btn">
+                    <div>
+                        <mat-icon>tune</mat-icon>
+                        <span>Customize</span>
+                    </div>
+                </button>
+                <button class="icon-btn">
+                    <div>
+                        <mat-icon>cloud_download</mat-icon>
+                        <span>Export</span>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <div class="chart-container">
+            <div class="bar-chart">
+                <div class="header-container">
+                    <div class="chart-header">
+                        <div>
+                            <img src="assets/pic.png" alt="logo">
+                        </div>
+                        <div>
+                            <div class="chart-title">
+                                Vendors breakdown
+                            </div>
+                            <div class="chart-sub-title">
+                                Keep track of vendors and their security ratings.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-actions">
+                        <button class="icon">
+                            <mat-icon>
+                                more_vert
+                            </mat-icon>
+                        </button>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <div id="barChart">
+
+                    </div>
+                </div>
+                <div class="chart-footer">
+                    <div>
+                        <button class="icon-btn">
+                            <span>View full report</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="angular-chart">
+                <div class="header-container">
+                    <div class="chart-header">
+                        <div class="chart-title">
+                            Vendors monitored
+                        </div>
+                        <div class="chart-sub-title">
+                            You're using 80% of available spots.
+                        </div>
+                    </div>
+                    <div class="header-actions">
+                        <button class="icon">
+                            <mat-icon>
+                                more_vert
+                            </mat-icon>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="chart-container">
+                    <div id="angularChart">
+
+                    </div>
+                    <div class="chart-content">
+                        <div class="chart-title">
+                            You've almost reached your limit
+                        </div>
+                        <div class="chart-description">You have used 80% of your available spots. <br>
+                            Upgrade plan to monitor more vendors.</div>
+                    </div>
+                </div>
+                <div class="chart-footer">
+                    <div>
+                        <button class="icon-btn">
+                            <div>
+                                <mat-icon>trending_up</mat-icon>
+                                <span>Upgrade plan</span>
+                            </div>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <app-table-container></app-table-container>
+        </div>
+    </main>
+</section>

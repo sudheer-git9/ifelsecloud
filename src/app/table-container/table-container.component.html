@@ -1,0 +1,131 @@
+<div class="main-container">
+    <div class="header">
+        <div class="title-container">
+            <div class="title">
+                Team members
+            </div>
+            <div class="sub-title">
+                <span>{{users?.grid_data.length}}</span>
+                <span>users</span>
+            </div>
+        </div>
+
+        <div class="header-actions">
+            <button class="icon">
+                <mat-icon>
+                    more_vert
+                </mat-icon>
+            </button>
+        </div>
+    </div>
+    <div class="main-table" *ngIf="users">
+        <table>
+            <thead>
+                <tr>
+                    <th class="align-center">
+                        <mat-checkbox [checked]="allComplete" [indeterminate]="someComplete()"
+                            (change)="selectAll($event.checked)">
+
+                        </mat-checkbox>
+                    </th>
+                    <th class="align-left">
+                        Name
+                    </th>
+                    <th class="align-left">
+                        <div class="status-header">
+                            <div>
+                                Status
+                            </div>
+                            <span class="ml-1">
+                                <mat-icon>arrow_downward</mat-icon>
+                            </span>
+                        </div>
+                    </th>
+                    <th class="align-left">
+                        Role
+                    </th>
+                    <th>
+                        License Use
+                    </th>
+                    <th>Teams</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let user of pagewiseData">
+                    <td class="align-center">
+                        <mat-checkbox [(ngModel)]="user.isSelected" (ngModelChange)="updateSelected()">
+                        </mat-checkbox>
+                    </td>
+                    <td class="align-left">
+                        <div class="name-col">
+                            <div>
+                                <img src="assets/dummy-user.png" alt="image">
+                            </div>
+                            <div class="name-detals">
+                                <div>{{user.name}}</div>
+                                <div>{{user.handle}}</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="align-left">
+                        <div [ngClass]="user.status == 'Customer' ? 'active-customer' : 'churned'" class="status-col">
+                            <div><mat-icon>circle</mat-icon></div>
+                            <span>{{user.status}}</span>
+                        </div>
+                    </td>
+                    <td>
+                        {{user.role}}
+                    </td>
+                    <td>
+                        <div class="license_col">
+                            <div>
+                                <mat-progress-bar mode="determinate" [value]="user.license_used"></mat-progress-bar>
+                            </div>
+                            <div>{{user.license_used}}%</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="teams_col">
+                            <ng-container *ngFor="let team of user.teams">
+                                <div [ngStyle]="{'color': team.text_color , 'background-color' : team.background_color ,
+                                'border-color':team.text_color }">
+                                    {{team.value}}
+                                </div>
+                            </ng-container>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="action-btns">
+                            <button (click)="deleteUser(user.id)">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                            <button (click)="editUser(user.name)">
+                                <mat-icon>edit</mat-icon>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="pagenator-container">
+            <button (click)="previousPage()" class="icon-btn" [disabled]="currentPage == 1">
+                <div>
+                    <mat-icon>arrow_back</mat-icon>
+                    <span>Previous</span>
+                </div>
+            </button>
+            <div class="page-container">
+                <span *ngFor="let page of totalPages" (click)="onPageChange(page)"
+                    [ngClass]="page == currentPage ? 'active-page':''">{{page}}</span>
+            </div>
+            <button (click)="nextPage()" class="icon-btn" [disabled]="currentPage == totalCount">
+                <div>
+                    <span>Next</span>
+                    <mat-icon>arrow_forward</mat-icon>
+                </div>
+            </button>
+        </div>
+    </div>
+</div>

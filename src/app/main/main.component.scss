@@ -1,0 +1,180 @@
+.main-section {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+
+    .side-container {
+        flex: 50px;
+    }
+
+    .main-container {
+        flex: calc(100vw - 50px);
+        background-color: var(--bgColor);
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 5px;
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-top: 10px;
+            padding-bottom: 15px;
+
+            .title {
+                font-size: 20px;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                color: var(--mainText);
+            }
+
+            .header-actions {
+                display: flex;
+                flex-direction: row;
+                gap: 5px;
+
+            }
+        }
+
+        .chart-container {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+
+            .bar-chart {
+                flex: 70;
+                border: 1px solid var(--border);
+                border-radius: 10px;
+                padding: 5px;
+
+                .header-container {
+                    border-bottom: solid var(--border);
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+
+                    .chart-header {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        gap: 5px;
+                        align-items: center;
+                        padding: 5px 10px;
+
+                        div {
+                            &:first-child {
+                                img {
+                                    width: 40px;
+                                }
+                            }
+                        }
+
+                    }
+
+
+                }
+
+                .chart-footer {
+                    div {
+                        .icon-btn {
+                            padding: 10px 10px;
+                            color: var(--mainText);
+                        }
+                    }
+                }
+            }
+
+            .angular-chart {
+                border: 1px solid var(--border);
+                padding: 5px;
+                border-radius: 10px;
+                flex: 30;
+                width: 100%;
+
+                .header-container {
+                    border-bottom: solid var(--border);
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    .chart-header {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+                        justify-content: center;
+                        padding: 5px 10px;
+                        flex: 90;
+                    }
+                }
+
+                .chart-container {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .chart-footer {
+                    div {
+                        .icon-btn {
+
+                            color: var(--mainText);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.chart-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--mainText);
+}
+
+.chart-sub-title {
+    font-size: 12px;
+    color: var(--subText);
+}
+
+.chart-footer {
+    border-top: solid var(--border);
+    width: 100%;
+    padding-top: 5px;
+
+    div {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+.chart-container {
+    padding: 5px;
+}
+
+#barChart {
+    height: 350px;
+    width: 100%;
+}
+
+#angularChart {
+    height: 285px;
+}
+
+.chart-content {
+    .chart-title {
+        color: var(--mainText);
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .chart-description {
+        color: var(--subText);
+        font-size: 12px;
+    }
+}

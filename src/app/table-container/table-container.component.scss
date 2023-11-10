@@ -1,0 +1,226 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    box-shadow: 0 4px 4px var(--border);
+    position: relative;
+
+    .header {
+        padding: 5px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .title-container {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+
+            .title {
+                font-size: 16px;
+                font-weight: 600;
+            }
+
+            .sub-title {
+                color: #9e87d5;
+                background-color: #e2d6ff;
+                border: #9e87d5;
+                border-radius: 12px;
+                padding: 1px 8px;
+                font-size: 12px;
+                display: flex;
+                gap: 4px;
+            }
+        }
+    }
+
+    .main-table {
+        table {
+            width: 100%;
+
+            thead {
+                tr {
+                    border-top: 1px solid #ccc;
+                    background-color: #e6e6e6;
+                }
+
+                th {
+                    padding: 5px 10px;
+                }
+            }
+
+            tbody {
+                tr {
+                    td {
+                        padding: 10px 5px;
+                    }
+
+
+
+                    &:hover {
+                        background-color: #edebf2;
+                    }
+                }
+
+
+            }
+        }
+    }
+}
+
+
+.align-center {
+    text-align: center;
+}
+
+.align-left {
+    text-align: left;
+}
+
+:host ::ng-deep .mdc-checkbox .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate):not([data-indeterminate=true])~.mdc-checkbox__background {
+    border-color: #b8b5c1;
+}
+
+.name-col {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+
+    div {
+
+        img {
+            width: 40px;
+        }
+    }
+
+    .name-detals {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        div {
+
+
+            &:first-child {
+                font-size: 14px;
+                color: var(--mainText);
+            }
+
+            &:last-child {
+                font-size: 12px;
+                color: var(--subText);
+            }
+        }
+    }
+
+
+}
+
+.status-col {
+    display: flex;
+    gap: 5px;
+    border-radius: 14px;
+    font-size: 14px;
+    position: relative;
+    padding: 3px 10px;
+
+    mat-icon {
+        position: absolute;
+        font-size: 10px;
+        top: 8px;
+        flex: 10px
+    }
+
+    span {
+        margin-left: 10px;
+    }
+}
+
+.license_col {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+
+    div {
+        &:first-child {
+            width: 100px;
+            align-items: center;
+            display: flex;
+        }
+    }
+}
+
+.teams_col {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+
+    div {
+        padding: 3px 10px;
+        border: 1px solid;
+        border-radius: 16px;
+        font-size: 12px;
+
+    }
+}
+
+.action-btns {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+
+    button {
+        background-color: transparent;
+        border: none;
+        color: var(--subText);
+    }
+}
+
+.status-header {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.pagenator-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.active-customer {
+    background-color: var(--activeBg);
+    color: var(--activeText);
+    border-color: var(--activeText);
+    width: 67%;
+}
+
+.churned {
+    background-color: var(--inActiveBg);
+    color: var(--inActiveTx);
+    border-color: var(--inActiveTx);
+    width: 67%;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: center;
+
+    span {
+        cursor: pointer;
+        padding: 6px 10px;
+        border: 1px solid var(--activeBg);
+        border-radius: 5px;
+
+        &.active-page {
+            background-color: var(--inActiveBg);
+        }
+    }
+}

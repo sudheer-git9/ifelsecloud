@@ -1,0 +1,63 @@
+/* You can add global styles to this file, and also import other style files */
+//  application global variables 
+
+
+
+.app-theme-default {
+  --mainText: #111726;
+  --btnText: #40495b;
+  --subText: #89909b;
+  --icon: #818798;
+  --bgColor: #ffffff;
+  --btnBorder: #d0d3d7;
+  --border: #d0d3d7;
+  --activeText: #6db985;
+  --activeBg: #ceeed8;
+  --inActiveTx: #7e8393;
+  --inActiveBg: #f0f0f0;
+}
+
+* {
+  outline: 0 !important;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.icon {
+  background-color: transparent;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 8px;
+  display: flex;
+  align-items: center;
+  color: var(--subText);
+
+}
+
+.icon-btn {
+  background-color: transparent;
+  border: 1px solid var(--btnBorder);
+  border-radius: 5px;
+  padding: 5px 8px;
+  color: var(--btnText);
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+  }
+}
+
+button {
+  cursor: pointer;
+}
