@@ -15,9 +15,13 @@ am4core.useTheme(am4themes_animated);
 })
 export class MainComponent {
 
+  constructor() {
+
+  }
   ngOnInit() {
     this.loadColumnChart();
     this.loadAngularGaugeChart();
+
   }
 
   loadColumnChart() {

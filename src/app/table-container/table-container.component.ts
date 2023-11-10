@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { ApiService } from '../api/api.service';
-import { MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-table-container',
@@ -75,9 +75,11 @@ export class TableContainerComponent {
   }
   editUser(userName: string) {
     this.dialog.open(DialogConfirm, {
+      width: '230px',
       data: {
         name: userName,
       },
+      backdropClass: 'backdropBackground'
     });
   }
   previousPage() {
